@@ -19,7 +19,7 @@ var TestRail = /** @class */ (function () {
                 password: this.options.password,
             }
         }).then(function (response) {
-            _this.lastRunDate = moment.unix(response.data[0].created_on).format('MM/DD/YYYY');
+            _this.lastRunDate = moment.unix(response.data.runs[0].created_on).format('MM/DD/YYYY');
             // set current date with same format as this.lastRunDate
             _this.currentDate = moment(new Date()).format('L');
             if (_this.lastRunDate === _this.currentDate) {
@@ -86,7 +86,7 @@ var TestRail = /** @class */ (function () {
                     password: this.options.password,
                 }
             }).then(function (response) {
-                _this.runId = response.data[0].id;
+                _this.runId = response.data.runs[0].id;
                 console.log("Publishing results to latest run: " + _this.runId);
                 publishToAPI();
             });

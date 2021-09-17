@@ -1,6 +1,6 @@
 {
-  "name": "salty-cypress-testrail-reporter",
-  "version": "1.3.7",
+  "name": "@romekn/cypress-testrail-reporter",
+  "version": "1.4.1",
   "description": "A Testrail reporter for cypress including TestRail API basic library",
   "main": "index.js",
   "private": false,
@@ -9,18 +9,11 @@
     "testrail",
     "reporter"
   ],
-  "author": {
-    "name": "Spencer Kekauoha",
-    "email": "spkekauoha@gmail.com"
-  },
+  "author": "Roman Novosad <romek.novosad@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skekauoha/salty-cypress-testrail-reporter"
-  },
-  "bugs": {
-    "url": ""
+    "url": "git+https://github.com/rnovosad/salty-cypress-testrail-reporter.git"
   },
   "scripts": {
     "tsc": "tsc",
@@ -28,7 +21,7 @@
     "build": "npm run clean && npm run tsc"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.4",
     "btoa": "^1.1.2",
     "chalk": "^2.4.1",
     "mocha": "^5.2.0",
@@ -41,5 +34,9 @@
     "chai": "^3.5.0",
     "rimraf": "^2.6.3",
     "typescript": "^2.9.2"
+  },
+  "homepage": "https://github.com/rnovosad/salty-cypress-testrail-reporter#readme",
+  "bugs": {
+    "url": "https://github.com/rnovosad/salty-cypress-testrail-reporter/issues"
   }
 }

@@ -25,7 +25,7 @@ export class TestRail {
       }
     }).then(response => {
 
-        this.lastRunDate = moment.unix(response.data[0].created_on).format('MM/DD/YYYY')
+        this.lastRunDate = moment.unix(response.data.runs[0].created_on).format('MM/DD/YYYY')
         // set current date with same format as this.lastRunDate
         this.currentDate = moment(new Date()).format('L');
 
@@ -101,7 +101,7 @@ export class TestRail {
                 password: this.options.password,
             }
           }).then(response => {
-              this.runId = response.data[0].id;
+              this.runId = response.data.runs[0].id;
               console.log(`Publishing results to latest run: ${this.runId}`);
               publishToAPI();
           })
